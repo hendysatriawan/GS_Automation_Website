@@ -243,9 +243,11 @@ Buka Penyakit via Menu
   Wait Until Element Is Visible    //div[@id='content']/section[@class='dislist-head']//form[@action='https://www.guesehat.com/nama-penyakit-a-z']//button[@class='dislist-search-button']    ${timeout}
   # cari nama penyakit
   Input Text    //div[@id='content']/section[@class='dislist-head']//form[@action='https://www.guesehat.com/nama-penyakit-a-z']//input[@name='keyword']    ${cari_penyakit}
+  Wait Until Element Is Visible    //div[@id='content']/section[@class='dislist-head']//form[@action='https://www.guesehat.com/nama-penyakit-a-z']//button[@class='dislist-search-button']    ${timeout}
   Click Element    //div[@id='content']/section[@class='dislist-head']//form[@action='https://www.guesehat.com/nama-penyakit-a-z']//button[@class='dislist-search-button']
   # buka yang dicari
   Wait Until Element Is Visible    Xpath=//a[contains(text(),'${cari_penyakit}')]   ${timeout}
+  Sleep    2s
   Click Element    Xpath=//a[contains(text(),'${cari_penyakit}')]
   Wait Until Element Is Visible    Xpath=//h2[contains(text(),'${cari_penyakit}')]    ${timeout}
   Scroll Element Into View    Xpath=//h2[contains(text(),'Rekomendasi Artikel')]
@@ -290,6 +292,7 @@ Buka Info Obat Via Menu
    Click Element    //div[@id='content']/section[@class='dislist-head']//form[@action='https://www.guesehat.com/info-obat']//button[@class='dislist-search-button']
    # buka yang dicari
    Wait Until Element Is Visible    Xpath=//a[contains(text(),'${cari_obat}')]   ${timeout}
+   Sleep    2s
    Click Element    Xpath=//a[contains(text(),'${cari_obat}')]
    Wait Until Element Is Visible    Xpath=//h2[contains(text(),'${cari_obat}')]    ${timeout}
    Scroll Element Into View    Xpath=//h2[contains(text(),'Rekomendasi Artikel')]

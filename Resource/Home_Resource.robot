@@ -284,5 +284,6 @@ Cari Artikel via search icon
   Sleep    2s
 
 Kembali ke Homepage
+  Sleep    1s
   Wait Until Element Is Visible    //div[@id='wrapper']//a[@href='https://www.guesehat.com/']/img[@alt='www.guesehat.com']    ${timeout}
   Click Element    //div[@id='wrapper']//a[@href='https://www.guesehat.com/']/img[@alt='www.guesehat.com']
